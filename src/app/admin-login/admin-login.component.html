@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+</head>
+<body>
+<div class="containerfluid">
+  <div class="form">
+  <form class="form-container">
+    <div class="logo">
+      <img src="\assets\Images\EntransLogo.png" alt="Entrans Logo" height="55px" width="139px">
+    </div>
+    <div class="welcome">
+      <p>Welcome to Entrans Hub!</p>
+    </div>
+    <div class="content">
+      <h3>Sign In</h3>
+      <div class="input-fields">
+        <div class="username-field">
+          <div class="username"  [ngClass]="{'error-border': Uname.touched && Uname.invalid || isCredentialsCorrect=='No'}">
+            <input type="text" placeholder="Username" ngModel name="Username" #Uname="ngModel" required [(ngModel)]="Username">
+          </div>
+          <span *ngIf="Uname.touched && Uname.hasError('required')" class="error-message">Username is required</span>
+        </div>
+        <div class="password-field">
+          <div class="Password" [ngClass]="{'error-border': Password.touched && Password.invalid || isCredentialsCorrect=='No'}">
+            <input type="{{ passwordVisible ? 'text' : 'password' }}" placeholder="Password" ngModel name="password" #Password="ngModel" required [(ngModel)]="UserPassword"  (input)="onPasswordInputChange()">
+            <button class="eyebutton" (click)="togglePasswordVisibility()" [disabled]="isPasswordEmpty" >
+              <img src="\assets\Images\Eye.png" alt="" class="eyeimg" *ngIf="!passwordVisible">
+              <img src="\assets\Images\Eye_false.png" alt="" class="eyeimg" *ngIf="passwordVisible">
+            </button>
+          </div>
+          <span *ngIf="Password.touched && Password.hasError('required')" class="error-message">Password is required</span>
+          <span *ngIf="isCredentialsCorrect=='No'" class="error-message">Invalid email or password. <br>Please try again.</span>
+        </div>
+
+      </div>
+      <div class="forgotpass">
+      <p routerLink="/forgot-password" >Forgot Password?</p></div>
+    </div>
+    <div class="loginbtn">
+      <button class="btn btn-danger" (click)="Login()">LOGIN</button>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>

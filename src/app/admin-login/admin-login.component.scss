@@ -1,0 +1,141 @@
+$Font_Family : 'Poppins', sans-serif;
+$Form_background:#FFFFFF;
+$input_border_color:#707070;
+$input_bgcolor :#e8f1ef;
+$link_color:#0051B1;
+$button_color:#EA454B;
+body{
+  .containerfluid{
+    padding: 158px 0px 157px 0px;
+  background-image: url("/assets/Images/entrans_office_Cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: $Font_Family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $Form_background;
+    border-radius: 5px;
+    padding: 25px 40px 30px 40px;
+    box-shadow: 0px 5px 15px 1px rgb(34, 34, 34);
+    .form-container{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .logo{
+        text-align: center;
+      }
+      .welcome{
+        text-align: center;
+      }
+      .content{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 10px;
+        .input-fields{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+        .username{
+          border: 1px solid $input_border_color;
+          background-color: $input_bgcolor;
+          padding-left: 15px;
+          &.error-border {
+            border: 1px solid red;
+          }
+          input[type=text]{
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            width: 285px;
+            height: 45px;
+          }
+
+        }
+       .error-message{
+          // margin: 0;
+          font-size: 12px;
+          color: red;
+          position: absolute;
+        }
+
+        .Password{
+          border: 1px solid $input_border_color;
+          background-color: $input_bgcolor;
+          justify-content: space-around;
+          display: flex;
+          align-items: center;
+          padding-left:10px ;
+          &.error-border {
+            border: 1px solid red;
+          }
+          input[type=password],[type=text]{
+            border: none;
+            background-color: transparent;
+            outline: 0;
+            width: 240px;
+            height: 45px;
+
+            &::-ms-reveal {display : none ;}
+          }
+          .eyebutton{
+            border: 0;
+            background-color: transparent;
+            &:disabled{
+              opacity: 0.5;
+            }
+          .eyeimg{
+            // cursor: pointer;
+            height: 25px;
+            width: 25px;
+          }}
+        }
+        }
+        .forgotpass{
+          display: flex;
+          justify-content: flex-end;
+          p{
+          font-size: 14px;
+          color: $link_color;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+          }
+
+        }
+
+      }
+      .loginbtn{
+        text-align: center;
+        button{
+          padding: 12px 124px 12px 124px;
+          border-radius: 0px;
+          background-color: $button_color;
+          border: none;
+          &:hover{
+            background-color: #fe2f36;
+          }
+        }
+      }
+    }
+  }
+  }
+  @media screen and (max-width: 380px) {
+    .containerfluid {
+      padding: 100px 0px 100px 0px;
+    }
+    .form{
+      padding: 15px 20px 15px 20px;
+
+    }
+  }
+
+}
