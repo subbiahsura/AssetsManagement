@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertServiceService } from '../Shared/alert-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-reset-password',
@@ -15,7 +16,12 @@ export class ResetPasswordComponent {
   isPasswordEmpty: boolean = true;
   isCPasswordEmpty:boolean=true;
   emailFromForgottenPassword:any;
-  constructor(private alertService:AlertServiceService){
+  paramdata:any;
+  constructor(private alertService:AlertServiceService,private ARoute:ActivatedRoute){
+    this.ARoute.params.subscribe(pdata=>{
+      this.paramdata = pdata
+    })
+    console.log(this.paramdata)
     this.emailFromForgottenPassword=this.alertService.getRegisteredEmail();
   }
   checkPasswordMatch(){
@@ -28,12 +34,13 @@ export class ResetPasswordComponent {
   savePassword(){
     console.log(this.emailFromForgottenPassword);
     var body={
-      // Email:this.emailFromForgottenPassword,
+      userID: this.paramdata.userID,
       Password:this.ConformPassword
     }
     if(!this.Password || !this.ConformPassword){
       this.requiredError=true;
     }else if(this.checkPasswordMatch()){
+      console.log(body);
       this.alertService.resetPassword(body).subscribe({
         next: (result) => {
           // This code will execute when the login is successful.
