@@ -28,7 +28,7 @@ export class ResetPasswordComponent {
   savePassword(){
     console.log(this.emailFromForgottenPassword);
     var body={
-      Email:this.emailFromForgottenPassword,
+      // Email:this.emailFromForgottenPassword,
       Password:this.ConformPassword
     }
     if(!this.Password || !this.ConformPassword){

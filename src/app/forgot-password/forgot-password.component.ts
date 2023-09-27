@@ -32,9 +32,9 @@ export class ForgotPasswordComponent {
         next: (result) => {
           // This code will execute when the login is successful.
           this.isRegisteredEmail=true;
-          this.service.setRegisteredEmail(this.Email);
+          // this.service.setRegisteredEmail(this.Email);
           alert("Mail Sent Succesfully");
-          this.Router.navigate(['/Reset-Password'])
+          // this.Router.navigate(['/Reset-Password'])
         },
         error: (error) => {
           // This code will execute when there's an error in the login process.
