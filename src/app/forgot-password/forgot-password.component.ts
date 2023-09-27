@@ -12,6 +12,7 @@ export class ForgotPasswordComponent {
   isRegisteredEmail=true;
   isEmpty=false;
   istouched:boolean=false;
+  registeredemail:any;
 
   constructor(private Router:Router,private service:AlertServiceService){
 
@@ -32,9 +33,9 @@ export class ForgotPasswordComponent {
         next: (result) => {
           // This code will execute when the login is successful.
           this.isRegisteredEmail=true;
-          this.service.setRegisteredEmail(this.Email);
+          // this.registeredemail=this.service.setRegisteredEmail(this.Email);
           alert("Mail Sent Succesfully");
-          this.Router.navigate(['/Reset-Password'])
+          // this.Router.navigate(['/Reset-Password'])
         },
         error: (error) => {
           // This code will execute when there's an error in the login process.
