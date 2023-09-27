@@ -14,7 +14,10 @@ export class ResetPasswordComponent {
   ConformPassword:any;
   isPasswordEmpty: boolean = true;
   isCPasswordEmpty:boolean=true;
-  constructor(private alertService:AlertServiceService){}
+  emailFromForgottenPassword:any;
+  constructor(private alertService:AlertServiceService){
+    this.emailFromForgottenPassword=this.alertService.getRegisteredEmail();
+  }
   checkPasswordMatch(){
     if(this.Password == this.ConformPassword){
       return true;
@@ -23,10 +26,30 @@ export class ResetPasswordComponent {
     }
   }
   savePassword(){
+    console.log(this.emailFromForgottenPassword);
+    var body={
+      Email:this.emailFromForgottenPassword,
+      Password:this.ConformPassword
+    }
     if(!this.Password || !this.ConformPassword){
       this.requiredError=true;
     }else if(this.checkPasswordMatch()){
-      this.showAlert();
+      this.alertService.resetPassword(body).subscribe({
+        next: (result) => {
+          // This code will execute when the login is successful.
+          this.showAlert();
+        },
+        error: (error) => {
+          // This code will execute when there's an error in the login process.
+
+          console.error("Reset Password has some error", error);
+        },
+        // Optionally, you can include the `complete` callback if needed.
+        complete: () => {
+          // This code will execute when the observable completes (if needed).
+        }
+      })
+
     }else{
       this.checkPasswordMatch();
     }

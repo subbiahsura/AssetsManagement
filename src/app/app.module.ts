@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetPasswordAlertComponent } from './reset-password-alert/reset-password-alert.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ResetPasswordAlertComponent } from './reset-password-alert/reset-passwo
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
