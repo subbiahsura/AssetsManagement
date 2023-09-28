@@ -13,6 +13,7 @@ export class ForgotPasswordComponent {
   isEmpty=false;
   istouched:boolean=false;
   registeredemail:any;
+  isMailSent=false;
 
   constructor(private Router:Router,private service:AlertServiceService){
 
@@ -35,6 +36,7 @@ export class ForgotPasswordComponent {
           this.isRegisteredEmail=true;
           // this.registeredemail=this.service.setRegisteredEmail(this.Email);
           alert("Mail Sent Succesfully");
+          this.isMailSent=true;
           // this.Router.navigate(['/Reset-Password'])
         },
         error: (error) => {
