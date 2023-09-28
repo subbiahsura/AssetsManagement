@@ -8,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class AlertServiceService {
   Email:String="";
   constructor(private Dialog : MatDialog,private http:HttpClient) { }
-  apiUrlForAdminLogin="http://localhost:4003/login";
-  apiUrlForCheckEmail="http://localhost:4003/checkmail";
-  apiUrlForResetPassword="http://localhost:4003/ResetPassword";
+  apiUrlForAdminLogin="http://localhost:4003/auth/login";
+  apiUrlForCheckEmail="http://localhost:4003/auth/forgot-password";
+  apiUrlForResetPassword="http://localhost:4003/auth/reset-password";
   setRegisteredEmail(email:any){
     this.Email = email;
   }
