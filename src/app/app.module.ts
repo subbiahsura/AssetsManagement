@@ -10,6 +10,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetPasswordAlertComponent } from './reset-password-alert/reset-password-alert.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     AdminLoginComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    ResetPasswordAlertComponent
+    ResetPasswordAlertComponent,
+    SideNavigationComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

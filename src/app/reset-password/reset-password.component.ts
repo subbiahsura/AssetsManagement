@@ -35,6 +35,7 @@ export class ResetPasswordComponent {
     console.log(this.emailFromForgottenPassword);
     var body={
       userID: this.paramdata.userID,
+      token:this.paramdata.token,
       Password:this.ConformPassword
     }
     if(!this.Password || !this.ConformPassword){

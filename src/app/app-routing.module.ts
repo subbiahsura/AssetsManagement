@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 const routes: Routes = [
   {
@@ -20,7 +23,15 @@ const routes: Routes = [
 {
   path:"Reset-Password/:userID/:token",
   component:ResetPasswordComponent
-}
+},
+{
+  path:"sideNav",
+  component:SideNavigationComponent
+},
+{
+  path:"dashboard",
+  component:DashboardComponent
+},
 ];
 
 @NgModule({
