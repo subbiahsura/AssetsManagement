@@ -28,7 +28,9 @@ export class SideNavigationComponent {
   // }
   usersClicked(){
     this.UsersLIClicked=true;
+    console.log("Users Menu clickstatus = ",this.UsersLIClicked)
     this.service.isUsersLIclicked(this.UsersLIClicked);
+    console.log("check its is updated in service = ",this.service.checkUsersLiClicked())
   }
   resetUsersClicked() {
     this.UsersLIClicked = false;

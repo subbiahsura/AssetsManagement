@@ -1,6 +1,18 @@
 <div class="fluid">
   <app-top-navbar></app-top-navbar>
-<app-side-navigation></app-side-navigation>
-<div class="body"></div>
+
+<div class="body">
+  <div class="sidenavigation">
+    <app-side-navigation></app-side-navigation>
+  </div>
+  <div class="body_content">
+    <!-- <div *ngIf="isUsermenuclicked" class="userscomponent"><app-users></app-users></div> -->
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- <div *ngIf="isUsermenuclicked" class="users">
+   <app-users></app-users>
+  </div> -->
+</div>
 </div>
 
