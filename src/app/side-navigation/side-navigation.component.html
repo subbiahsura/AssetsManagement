@@ -15,7 +15,8 @@
                 <img src="\assets\Images\sidenav\Forwarddown.png" class="arrow"*ngIf="clicked">
               </a>
               <ul class="dropdown-content " [ngClass]="{'dropdowncontentshow': clicked}">
-                  <li routerLinkActive="activelist" routerLink="/users" (click)="usersClicked()"><img src="\assets\Images\sidenav\Data Quality.png" alt="">&emsp;Users</li>
+                  <!-- <li routerLinkActive="activelist" routerLink="/users" (click)="usersClicked()"><img src="\assets\Images\sidenav\Data Quality.png" alt="">&emsp;Users</li> -->
+                  <li  routerLinkActive="activelist" routerLink="/dashboard/users" ><img src="\assets\Images\sidenav\Data Quality.png" alt="">&emsp;Users</li>
                   <li routerLinkActive="activelist"><img src="\assets\Images\sidenav\Access.png" alt="">&emsp;Access Priviledge</li>
               </ul>
           </li>

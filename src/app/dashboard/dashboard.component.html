@@ -1,18 +1,34 @@
-<div class="fluid">
+<!-- <div class="fluid">
   <app-top-navbar></app-top-navbar>
 
-<div class="body">
+<div class="content">
   <div class="sidenavigation">
     <app-side-navigation></app-side-navigation>
   </div>
   <div class="body_content">
-    <!-- <div *ngIf="isUsermenuclicked" class="userscomponent"><app-users></app-users></div> -->
+    <div *ngIf="isUsermenuclicked" class="userscomponent"><app-users></app-users></div>
+    <router-outlet></router-outlet>
+    <app-users></app-users>
+  </div>
+  <div class="dashboard-content">
     <router-outlet></router-outlet>
   </div>
 
-  <!-- <div *ngIf="isUsermenuclicked" class="users">
+  <div *ngIf="isUsermenuclicked" class="users">
    <app-users></app-users>
-  </div> -->
+  </div>
 </div>
+</div> -->
+
+<div class="fluid">
+  <app-top-navbar></app-top-navbar>
+  <div class="content">
+    <div class="sidenavigation">
+      <app-side-navigation></app-side-navigation>
+    </div>
+    <div class="dashboard-content">
+      <router-outlet></router-outlet> <!-- This is correct -->
+    </div>
+  </div>
 </div>
 

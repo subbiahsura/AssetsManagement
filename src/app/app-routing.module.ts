@@ -35,12 +35,11 @@ const routes: Routes = [
   component:TopNavbarComponent
 },
 {
-  path:"dashboard",
-  component:DashboardComponent
-},
-{
-  path:"users",
-  component:UsersComponent
+  path: 'dashboard',
+  component: DashboardComponent,
+  children: [
+    { path: 'users', component: UsersComponent }, // Child route
+  ],
 },
 ];
 

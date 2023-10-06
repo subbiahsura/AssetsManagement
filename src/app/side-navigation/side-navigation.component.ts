@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertServiceService } from '../Shared/alert-service.service';
 import { FunctionalitiesService } from '../Shared/functionalities.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-navigation',
@@ -11,7 +12,7 @@ export class SideNavigationComponent {
   clicked=false;
   isNavOpen=true;
   UsersLIClicked=false;
-  constructor(private service : FunctionalitiesService){}
+  constructor(private service : FunctionalitiesService,private router:Router){}
   isclicked(){
     this.clicked=!this.clicked;
   }
@@ -27,13 +28,15 @@ export class SideNavigationComponent {
   //   console.log(this.isNavOpen)
   // }
   usersClicked(){
-    this.UsersLIClicked=true;
-    console.log("Users Menu clickstatus = ",this.UsersLIClicked)
-    this.service.isUsersLIclicked(this.UsersLIClicked);
-    console.log("check its is updated in service = ",this.service.checkUsersLiClicked())
+    // this.UsersLIClicked=true;
+    // console.log("Users Menu clickstatus = ",this.UsersLIClicked)
+    // this.service.isUsersLIclicked(this.UsersLIClicked);
+    // console.log("check its is updated in service = ",this.service.checkUsersLiClicked())
+    // this.router.navigate(['/dashboard/users']);
   }
   resetUsersClicked() {
     this.UsersLIClicked = false;
     this.service.isUsersLIclicked(this.UsersLIClicked);
   }
+
 }
