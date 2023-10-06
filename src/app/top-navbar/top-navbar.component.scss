@@ -1,0 +1,80 @@
+$white_color: #FFFFFF;
+$Font_Family : 'Poppins', sans-serif;
+$red_color:#EA454B;
+$light_grey:#f5f5f5;
+$border_color:#9F9F9F;
+.fluid{
+  font-family: $Font_Family;
+background-color: $light_grey;
+height: fit-content;
+// border-bottom: 3px solid green;
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white_color;
+  padding: 10px 20px 10px 20px;
+  .leftcontent{
+    width: 380px;
+    // border: 1px solid red;
+    display: flex;
+    align-items: normal;
+    // justify-content: space-between;
+    gap: 150px;
+   .logo{
+    // border: 2px solid black;
+    // align-self: flex-start;
+    height: 50px;
+    width: 120px;
+   }
+    h2{
+      // padding-left: 140px;
+      // border: 2px solid grey;
+      font-weight: 600;
+      color: $red_color;
+      align-self: flex-end;
+    }
+
+  }
+
+  .navcontent{
+    display: flex;
+    gap: 25px;
+    .searchbar{
+      padding: 0px 15px 0px 10px;
+      gap: 10px;
+      border: 1px solid $border_color;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0px 1px 10px 2px rgb(240, 240, 240);
+      .navimg{
+        height:20px;
+        width:20px;
+      }
+      input[type=text]{
+        outline: 0;
+        border: 0;
+        width: 120px;
+      }
+    }
+    .notification{
+      button{
+        background-color: $white_color;
+        border: 1px solid $border_color;
+        border-radius:5px;
+        .navimg{
+          height:20px;
+        width:20px;
+        }
+      }
+    }
+    .profile{
+      .profileimg{
+        height: 30px;
+        width: 32px;
+      }
+    }
+  }
+}
+}

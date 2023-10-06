@@ -12,6 +12,8 @@ import { ResetPasswordAlertComponent } from './reset-password-alert/reset-passwo
 import { HttpClientModule } from '@angular/common/http';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
+import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 
 
 
@@ -24,6 +26,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ResetPasswordAlertComponent,
     SideNavigationComponent,
     DashboardComponent,
+    UsersComponent,
+    TopNavbarComponent,
   ],
   imports: [
     BrowserModule,

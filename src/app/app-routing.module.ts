@@ -5,6 +5,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
+import { TopNavbarComponent } from './top-navbar/top-navbar.component';
 
 
 const routes: Routes = [
@@ -29,8 +31,16 @@ const routes: Routes = [
   component:SideNavigationComponent
 },
 {
+  path:"topNav",
+  component:TopNavbarComponent
+},
+{
   path:"dashboard",
   component:DashboardComponent
+},
+{
+  path:"users",
+  component:UsersComponent
 },
 ];
 
