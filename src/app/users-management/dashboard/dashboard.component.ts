@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertServiceService } from '../Shared/alert-service.service';
-import { FunctionalitiesService } from '../Shared/functionalities.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -11,9 +10,8 @@ export class DashboardComponent {
   ismenuclicked:any;
   navbarstatus:any;
   isUsermenuclicked=false;
-  constructor(private service:FunctionalitiesService){
-    this.isUsermenuclicked = this.service.checkUsersLiClicked();
-    console.log("User menuclick status from service = ", this.isUsermenuclicked);
+  constructor(){
+
     // while(this.isUsermenuclicked==true){
     //   this.isUsermenuclicked = this.service.checkUsersLiClicked();
     // }

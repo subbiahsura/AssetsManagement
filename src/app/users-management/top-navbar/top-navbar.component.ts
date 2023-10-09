@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FunctionalitiesService } from '../Shared/functionalities.service';
+import { FunctionalitiesService } from '../../Shared/functionalities.service';
 
 @Component({
   selector: 'app-top-navbar',

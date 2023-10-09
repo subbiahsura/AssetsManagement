@@ -2,5 +2,15 @@
   .bank-details{
     display: flex;
     justify-content: space-around;
+    .leftcontent{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .input-feilds{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    }
   }
 }

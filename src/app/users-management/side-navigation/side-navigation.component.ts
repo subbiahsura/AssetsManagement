@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { AlertServiceService } from '../Shared/alert-service.service';
-import { FunctionalitiesService } from '../Shared/functionalities.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +10,7 @@ export class SideNavigationComponent {
   clicked=false;
   isNavOpen=true;
   UsersLIClicked=false;
-  constructor(private service : FunctionalitiesService,private router:Router){}
+  constructor(){}
   isclicked(){
     this.clicked=!this.clicked;
   }
@@ -36,7 +34,7 @@ export class SideNavigationComponent {
   }
   resetUsersClicked() {
     this.UsersLIClicked = false;
-    this.service.isUsersLIclicked(this.UsersLIClicked);
+
   }
 
 }

@@ -10,10 +10,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetPasswordAlertComponent } from './reset-password-alert/reset-password-alert.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SideNavigationComponent } from './side-navigation/side-navigation.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UsersComponent } from './users/users.component';
-import { TopNavbarComponent } from './top-navbar/top-navbar.component';
+import { UsersComponent } from './users-management/users/users.component';
+import { UsersManagementModule } from './users-management/users-management.module';
+import { AddUserModule } from './add-user/add-user.module';
+
 
 
 
@@ -24,10 +24,7 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
     ForgotPasswordComponent,
     ResetPasswordComponent,
     ResetPasswordAlertComponent,
-    SideNavigationComponent,
-    DashboardComponent,
     UsersComponent,
-    TopNavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +32,9 @@ import { TopNavbarComponent } from './top-navbar/top-navbar.component';
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersManagementModule,
+    AddUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
