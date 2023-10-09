@@ -1,0 +1,79 @@
+$Font_Family : 'Poppins', sans-serif;
+$Form_background:#FFFFFF;
+$input_border_color:#707070;
+$input_bgcolor :#e8f1ef;
+$link_color:#0051B1;
+$button_color:#EA454B;
+@mixin select-styling{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  label{
+    font-size: 13px;
+  }
+  input[type=text],[type=number],[type=date],select{
+    width: 200px;
+    height: 30px;
+  }
+}
+.container-fluid{
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: $Form_background;
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // border: 2px solid red;
+    // padding: 0px 0px 250px 0px;
+    padding-bottom: 30px;
+    gap: 220px;
+
+    .formcontent{
+      padding: 30px 130px 30px 130px;
+    font-family: $Font_Family;
+
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  .left-content{
+    // background-color: white;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    .input-fields{
+      @include select-styling;
+
+    }
+  }
+  .right-content{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    .input-fields{
+      @include select-styling;
+    }
+  }
+}
+.buttons{
+  // border: 2px solid green;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding-right: 70px;
+  button{
+    padding: 10px 30px 10px 30px;
+    border-radius: 0;
+    border: 0;
+    background-color: $button_color;
+    .btn-content{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+  }
+}

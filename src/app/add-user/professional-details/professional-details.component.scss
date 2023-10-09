@@ -1,0 +1,165 @@
+$white_color:#FFFFFF;
+$red_color:#EA454B;
+$Font_Family : 'Poppins', sans-serif;
+$light_Grey:#f5f5f5;
+$table_content_color:#393939;
+$table_border:#A0A0A0;
+@mixin content-styling{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .input-feilds{
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    input[type=text],[type=date]{
+      width: 220px;
+      height: 30px;
+    }
+  }
+}
+@mixin employment-styling{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+  .employment-input-content{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+     input[type=text]{
+      width: 220px;
+      height: 30px;
+    }
+    input[type=date]{
+      width: 50px;
+      height: 30px;
+    }
+  }
+}
+.container-fluid{
+  // border-bottom: 3px solid green;
+  font-family: $Font_Family;
+  font-size: 13px;
+  background-color: $white_color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 30px 50px 30px;
+  border-radius: 20px;
+  h4{
+    font-size: 13px;
+    font-weight: 500;
+  }
+.employeedetails{
+  display: flex;
+  justify-content: space-around;
+  // padding: 0px 120px 0px 120px ;
+  .left-content{
+    @include content-styling;
+  }
+  .right-content{
+    @include content-styling;
+    .intership-checkbox{
+      display: flex;
+      gap: 10px;
+      align-self: flex-end;
+      align-items: center;
+      input[type=checkbox]{
+        // color: $red_color;
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+}
+.internshipdetails{
+  // padding: 0px 130px 0px 130px ;
+  display: flex;
+  justify-content: space-around;
+  .inputcontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    input[type=date]{
+      width: 220px;
+      height: 30px;
+    }
+  }
+}
+.previous-employment-details{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .employment-content{
+    display: flex;
+  justify-content: space-around;
+  .leftsidecontent{
+   @include employment-styling;
+  }
+  .rightsidecontent{
+    @include employment-styling;
+  }
+  }
+  .table{
+    padding-right: 30px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    // border: 2px solid black;
+    .table-options{
+      display: flex;
+      align-self: flex-end;
+      gap: 30px;
+      justify-content: flex-end;
+      padding-right: 100px;
+        img{
+          height: 30px;
+          width: 30px;
+        }
+    }
+    table{
+      // justify-self: center;
+      width: 930px;
+      color: $table_content_color;
+      border: 1px solid $table_border;
+      tr{
+        // display: flex;
+        flex-direction: row;
+        th{
+          border: 1px solid $table_border;
+        }
+        td{
+
+          height:100px;
+        }
+      }
+
+
+    }
+  }
+  .buttons{
+    // border: 2px solid red;
+    justify-content: flex-end;
+    display: flex;
+    gap: 30px;
+  padding-right: 130px;
+  button{
+    padding: 10px 30px 10px 30px;
+    border-radius: 0;
+    border: 0;
+    background-color: $red_color;
+    .btn-content{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  }
+
+}
+}

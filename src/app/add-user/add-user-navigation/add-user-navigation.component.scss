@@ -1,0 +1,35 @@
+$white_color:#FFFFFF;
+$red_color:#EA454B;
+$Font_Family : 'Poppins', sans-serif;
+$light_Grey:#f5f5f5;
+.container-fluid{
+
+  // border: 2px solid red;
+  display: flex;
+  align-items: flex-end;
+
+  background-color: $white_color;
+
+  ul{
+    height: fit-content;
+    margin-bottom: 0;
+    // padding: 10px 0px 10px 0px;
+    padding-top: 10px;
+    // border: 2px solid black;
+    width: 1200px;
+    font-family: $Font_Family;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    .active{
+      color: $red_color;
+      border-bottom: 1px solid $red_color;
+    }
+    li{
+      // padding-bottom: 10px;
+      padding: 0px 10px 10px 10px;
+      cursor: pointer;
+    }
+  }
+}

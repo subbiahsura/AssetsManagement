@@ -1,0 +1,102 @@
+<div class="container-fluid">
+<div class="employeedetails">
+  <div class="left-content">
+    <div class="input-feilds">
+      <label>Employee ID</label>
+    <input type="text">
+    </div>
+    <div class="input-feilds">
+      <label>Designation</label>
+    <input type="text">
+    </div>
+    <div class="input-feilds">
+      <label>Primary Skill</label>
+    <input type="text">
+    </div>
+  </div>
+  <div class="right-content">
+    <div class="input-feilds">
+      <label>Date of Joining</label>
+    <input type="date" >
+    </div>
+    <div class="input-feilds">
+      <label>Secondary Skill</label>
+    <input type="text">
+    </div>
+    <div class="intership-checkbox">
+      <input type="checkbox" [(ngModel)]="checkboxChecked" (click)="toggleDivVisibility()">
+      <label > Internship</label>
+    </div>
+  </div>
+</div>
+<h4 *ngIf="checkboxChecked">Internship Details </h4>
+<div class="internshipdetails" *ngIf="checkboxChecked">
+  <div class="inputcontent">
+    <label >Start Date</label>
+    <input type="date" name="" id="">
+  </div>
+  <div class="inputcontent">
+    <label >End Date</label>
+    <input type="date" name="" id="">
+  </div>
+</div>
+<h4>Previous Employment Details</h4>
+<div class="previous-employment-details">
+  <div class="employment-content">
+    <div class="leftsidecontent">
+      <div class="employment-input-content">
+        <label>Organization Name</label>
+      <input type="text">
+      </div>
+      <div class="employment-input-content">
+        <label>Designation</label>
+      <input type="text">
+      </div>
+    </div>
+    <div class="rightsidecontent">
+      <div class="employment-input-content">
+        <label>Period of Service From</label>
+      <input type="date">
+      <label>To</label>
+      <input type="date">
+      </div>
+      <div class="employment-input-content">
+        <label>Annual CTC</label>
+      <input type="text">
+      </div>
+    </div>
+  </div>
+  <div class="table">
+    <div class="table-options">
+      <img src="\assets\Images\addUser\Delete.png" alt="">
+      <img src="\assets\Images\addUser\Add user.png" alt="">
+    </div>
+    <table>
+      <tr>
+        <th>S.No</th>
+        <th>Organization</th>
+        <th>Designation</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Annual CTC</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div class="buttons">
+    <button class="btn btn-danger">
+      <div class="btn-content"> <img src="\assets\Images\addUser\Back.png" alt="">Back</div>
+      </button>
+    <button class="btn btn-danger">
+      <div class="btn-content">Save and Next<img src="\assets\Images\addUser\forwardArrow.png" alt=""></div>
+    </button>
+  </div>
+</div>
+</div>
